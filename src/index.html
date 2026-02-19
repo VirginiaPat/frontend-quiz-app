@@ -21,16 +21,56 @@
 
     <title>Virgi | Frontend quiz app</title>
   </head>
-  <body class="flex flex-col bg-grey-50 z-0">
-    <header class="flex justify-center">
+  <body class="flex flex-col bg-grey-50 -z-10">
+    <header
+      class="flex justify-end pt-4 pb-12 pl-6 pr-6 z-20 md:pt-10 md:pb-12.25 md:pl-16 md:pr-16 xl:pl-0 xl:pr-0 xl:pt-20.75 xl:pb-21.25 xl:w-289.25 xl:mx-auto"
+    >
       <!-- hidden h1 for screen reader users -->
-      <h1 class="text-preset-5 sr-only">Frontend quiz app</h1>
+      <h1 class="text-medium-leading-100 text-lg text-center sr-only">
+        Frontend quiz app
+      </h1>
+      <!-- 1.SELECTED QUIZ SUBJECT CONTAINER -->
+      <div class="flex items-center justify-start gap-4 mr-auto md:gap-6">
+        <img
+          class="bg-purple-100 rounded-sm p-1.5 w-10 h-10 md:rounded-lg md:p-2 md:w-14 md:h-14"
+          src="../images/icon-accessibility.svg"
+          alt=""
+        />
+        <span class="text-medium-leading-100 text-lg text-blue-900 md:text-28px"
+          >Accesibility</span
+        >
+      </div>
+
+      <!-- 2.TOGGLE SWITCH CONTAINER -->
+      <div class="flex items-center justify-end gap-2 md:gap-4">
+        <img
+          class="w-4 h-4 md:w-6 md:h-6"
+          src="../images/icon-sun-dark.svg"
+          alt=""
+        />
+        <input
+          type="checkbox"
+          class="peer sr-only opacity-0"
+          id="toggle-switch-mode"
+        />
+        <label
+          for="toggle-switch-mode"
+          class="relative flex h-5 w-8 cursor-pointer items-center rounded-full bg-purple-600 px-1 before:h-3 before:w-3 after:h-3 after:w-3 before:rounded-full before:bg-white before:duration-300 peer-checked:bg-purple-600 peer-checked:before:translate-x-full md:h-7 md:w-12 md:before:h-5 md:before:w-5"
+        >
+          <span class="sr-only">Toggle dark - light mode</span>
+        </label>
+
+        <img
+          class="w-4 h-4 md:w-6 md:h-6"
+          src="../images/icon-moon-dark.svg"
+          alt=""
+        />
+      </div>
     </header>
-    <!-- Two containers: 1- Accessibility container, 2- All the rest -->
-    <main class="flex flex-col">
+    <main>
       <!-- BACKGROUND ILLUSTRATIONS -->
-      <!-- 1:top-left illustration -->
-      <div class="fixed left-0 top-0 z-10">
+      <!-- 1:Top-left illustration -->
+      <div class="fixed left-0 top-0 z-0">
         <img
           class="md:hidden"
           src="../images/pattern-background-mobile-light.svg"
@@ -47,76 +87,46 @@
           alt=""
         />
       </div>
-      <!-- 2: right-bottom illustration (desktop only) -->
-      <div class="hidden xl:block xl:fixed xl:right-0 xl:bottom-0">
+      <!-- 2: Right-bottom illustration (desktop only) -->
+      <div class="hidden z-0 xl:block xl:fixed xl:right-0 xl:bottom-0">
         <img src="../images/pattern-bg-desktop-light-bottom.svg" alt="" />
       </div>
 
-      <!--START MENU------------------------------------------------------------------------------>
-      <div
-        id="start menu"
-        class="pl-6 pr-6 pt-6.5 z-20 md:pl-16 md:pr-16 md:pt-13.5 xl:pl-0 xl:pr-0 xl:pt-24.25 xl:w-289.25 xl:mx-auto"
+      <!-- START MENU----------------------------------------------- -->
+      <section
+        id="start-menu-section"
+        class="hidden pl-6 pr-6 md:pl-16 md:pr-16 xl:pl-0 xl:pr-0 xl:w-289.25 xl:mx-auto"
       >
-        <!-- 1: Accessibility container -->
-        <div
-          class="flex justify-end items-center pb-6.5 md:pb-11.75 xl:pb-24.75"
-        >
-          <!-- 1b: Toggle switch -->
-          <div class="flex items-center gap-2 md:gap-4">
-            <img
-              class="w-4 h-4 md:w-6 md:h-6"
-              src="../images/icon-sun-dark.svg"
-              alt=""
-            />
-            <input type="checkbox" class="peer sr-only opacity-0" id="toggle" />
-            <label
-              for="toggle"
-              class="relative flex h-5 w-8 cursor-pointer items-center rounded-full bg-purple-600 px-1 before:h-3 before:w-3 after:h-3 after:w-3 before:rounded-full before:bg-white before:duration-300 peer-checked:bg-purple-600 peer-checked:before:translate-x-full md:h-7 md:w-12 md:before:h-5 md:before:w-5"
-              for="toggle "
-            >
-              <span class="sr-only">Toggle dark - light mode</span>
-            </label>
-
-            <img
-              class="w-4 h-4 md:w-6 md:h-6"
-              src="../images/icon-moon-dark.svg"
-              alt=""
-            />
-          </div>
-        </div>
-
-        <!-- 2: Welcome text, and list of options -->
-        <div
-          class="flex flex-col gap-10 pt-8 md:gap-16 md:pt-0 xl:flex-row xl:gap-32"
-        >
-          <!-- 2.1: Welcome text etc -->
+        <!-- 1. Welcome text, and list of options container -->
+        <div class="flex flex-col gap-10 md:gap-16 xl:flex-row xl:gap-32">
+          <!-- 1.1: Welcome text etc -->
           <div class="flex flex-col gap-4 xl:gap-12">
             <div class="flex flex-col gap-2">
               <span
-                class="font-rubic font-light text-40px leading-[100%] tracking-normal text-blue-900 md:text-64px"
+                class="z-20 text-light-leading-100 text-40px text-blue-900 md:text-64px"
                 >Welcome to the</span
               >
               <h140px
                 lead
-                class="font-rubic font-medium text-ing-[100%] tracking-normal text-blue-900 md:text-64px"
+                class="z-20 text-medium-leading-100 text-40px text-blue-900 md:text-64px"
               >
                 Frontend Quiz!
               </h140px>
             </div>
             <span
-              class="font-rubic font-normal italic text-sm leading-[150%] tracking-normal text-grey-500 md:text-xl"
+              class="z-20 text-normal-leading-150 italic text-sm text-grey-500 md:text-xl"
               >Pick a subject to get started.</span
             >
           </div>
-          <!-- 2.2: List of options -->
-          <div class="flex flex-col gap-4 md:gap-6 xl:gap-4 xl:flex-1">
+          <!-- 1.2: List of options -->
+          <div class="z-20 flex flex-col gap-4 md:gap-6 xl:gap-4 xl:flex-1">
             <!-- HTML container -->
             <button
               id="html"
               type="button"
               aria-label="Start HTML quiz"
               aria-pressed="false"
-              class="drop-shadow-options flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
+              class="drop-shadow-button flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
             >
               <div
                 class="bg-orange-50 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl"
@@ -125,7 +135,7 @@
               </div>
 
               <span
-                class="font-rubic font-medium text-lg leading-[100%] tracking-normal text-blue-900 md:text-28px"
+                class="text-medium-leading-100 text-lg text-blue-900 md:text-28px"
                 >HTML</span
               >
             </button>
@@ -136,7 +146,7 @@
               type="button"
               aria-label="Start CSS quiz"
               aria-pressed="false"
-              class="drop-shadow-options flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
+              class="drop-shadow-button flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
             >
               <div
                 class="bg-green-100 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl"
@@ -145,7 +155,7 @@
               </div>
 
               <span
-                class="font-rubic font-medium text-lg leading-[100%] tracking-normal text-blue-900 md:text-28px"
+                class="text-medium-leading-100 text-lg text-blue-900 md:text-28px"
                 >CSS</span
               >
             </button>
@@ -156,7 +166,7 @@
               type="button"
               aria-label="Start Javascript quiz"
               aria-pressed="false"
-              class="drop-shadow-options flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
+              class="drop-shadow-button flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
             >
               <div
                 class="bg-blue-50 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl"
@@ -165,7 +175,7 @@
               </div>
 
               <span
-                class="font-rubic font-medium text-lg leading-[100%] tracking-normal text-blue-900 md:text-28px"
+                class="text-medium-leading-100 text-lg text-blue-900 md:text-28px"
                 >Javascript</span
               >
             </button>
@@ -176,7 +186,7 @@
               type="button"
               aria-label="Start Accesibility quiz"
               aria-pressed="false"
-              class="drop-shadow-options flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
+              class="drop-shadow-button flex items-center justify-start gap-4 p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 hover:outline-2 hover:outline-purple-600 focus:outline-2 focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:gap-8 md:rounded-3xl xl:pt-6 xl:pb-6 xl:pr-0 xl:pl-6"
             >
               <div
                 class="bg-purple-100 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl"
@@ -185,50 +195,295 @@
               </div>
 
               <span
-                class="font-rubic font-medium text-lg leading-[100%] tracking-normal text-blue-900 md:text-28px"
+                class="text-medium-leading-100 text-lg text-blue-900 md:text-28px"
                 >Accessibility</span
               >
             </button>
           </div>
         </div>
-      </div>
+      </section>
 
-      <!--QUESTION MODE-------------------------------------------------------------------->
-      <div id="question-mode" class="hidden pl-6 pr-6 pt-4 z-20">
-        <!-- 1: Accessibility container -->
-        <div class="flex justify-between items-center pb-4">
-          <!-- 1a : Accessibility and img -->
-          <div class="flex items-center gap-4">
-            <img
-              class="bg-purple-100 rounded-sm p-1.5 w-10 h-10"
-              src="../images/icon-accessibility.svg"
-              alt=""
-            />
-            <span class="text-preset-4-mobile text-blue-900">Accesibility</span>
-          </div>
-          <!-- 1b: Toggle switch container-->
-          <div class="flex items-center gap-2">
-            <img class="w-4 h-4" src="../images/icon-sun-dark.svg" alt="" />
-            <input type="checkbox" class="peer sr-only opacity-0" id="toggle" />
-            <label
-              for="toggle"
-              class="relative flex h-5 w-8 cursor-pointer items-center rounded-full bg-purple-600 px-1 before:h-3 before:w-3 after:h-3 after:w-3 before:rounded-full before:bg-white before:duration-300 peer-checked:bg-purple-600 peer-checked:before:translate-x-full"
-              for="toggle "
+      <!-- QUESTIONS ---------------------------------------------------- -->
+      <section
+        id="questions-section"
+        class="hidden pl-6 pr-6 md:pl-16 md:pr-16 xl:pl-0 xl:pr-0 xl:w-289.25 xl:mx-auto"
+      >
+        <!-- Questions-progress bar and list of answers-Submit Button Container -->
+        <div class="flex flex-col gap-10 xl:flex-row xl:gap-32">
+          <!-- 1.Questions- progress bar container -->
+          <div class="flex flex-col gap-6 md:gap-10 xl:gap-46">
+            <!-- 1.1 Questions -->
+            <div class="flex flex-col gap-4 md:gap-6">
+              <span
+                class="z-20 text-normal-leading-150 italic text-xl text-grey-500 md:text-xl"
+                >Question 6 of 10</span
+              >
+              <span
+                class="z-20 text-medium-leading-120 text-4xl text-blue-900 md:text-4xl"
+                >Which of these color contrast ratios defines the minimum WCAG
+                2.1 Level AA requirement for normal text?</span
+              >
+            </div>
+            <!-- 1.2 Progress bar -->
+            <div
+              role="progressbar"
+              aria-label="50% Progressbar"
+              aria-valuenow="50"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              class="z-20 w-full block rounded-full overflow-hidden h-4 bg-white p-1"
             >
-              <span class="sr-only">Toggle dark - light mode</span>
-            </label>
+              <div
+                class="h-full bg-purple-600 rounded-full"
+                style="width: 50%"
+              ></div>
+            </div>
+          </div>
 
-            <img class="w-4 h-4" src="../images/icon-moon-dark.svg" alt="" />
+          <!-- 2. List of answers -Submit Button -->
+          <div class="z-20 flex flex-col gap-4 md:gap-8 xl:flex-1">
+            <!-- 2.1. List of answers  -->
+            <div class="flex flex-col gap-4 md:gap-6 xl:w-141">
+              <!-- A: ANSWER -->
+              <button
+                id="answer-a"
+                type="button"
+                aria-label="Answer: A"
+                aria-pressed="false"
+                class="drop-shadow-button flex items-center justify-between p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 group hover:outline-2 hover:outline-purple-600 focus:outline-[3px] focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:rounded-3xl xl:p-6"
+              >
+                <!-- Number of answer and answer container -->
+                <div class="flex items-center justify-start gap-4 md:gap-8">
+                  <div
+                    class="flex items-center justify-center bg-grey-50 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl group-hover:bg-purple-600 group-focus:bg-purple-600"
+                  >
+                    <span
+                      class="text-medium-leading-100 text-28px text-grey-500 md:text-28px group-hover:text-white group-focus:text-white"
+                      >A</span
+                    >
+                  </div>
+
+                  <span
+                    class="text-medium-leading-100 text-28px text-blue-900 md:text-28px"
+                    >4.5 : 1</span
+                  >
+                </div>
+                <!-- Correct or wrong image -->
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-correct.svg"
+                  alt=""
+                />
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-error.svg"
+                  alt=""
+                />
+              </button>
+
+              <!-- B: ANSWER -->
+              <button
+                id="answer-b"
+                type="button"
+                aria-label="Answer: B"
+                aria-pressed="false"
+                class="drop-shadow-button flex items-center justify-between p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 group hover:outline-2 hover:outline-purple-600 focus:outline-[3px] focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:rounded-3xl xl:p-6"
+              >
+                <!-- Number of answer and answer container -->
+                <div class="flex items-center justify-start gap-4 md:gap-8">
+                  <div
+                    class="flex items-center justify-center bg-grey-50 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl group-hover:bg-purple-600 group-focus:bg-purple-600"
+                  >
+                    <span
+                      class="text-medium-leading-100 text-28px text-grey-500 md:text-28px group-hover:text-white group-focus:text-white"
+                      >B</span
+                    >
+                  </div>
+
+                  <span
+                    class="text-medium-leading-100 text-28px text-blue-900 md:text-28px"
+                    >3 : 1
+                  </span>
+                </div>
+                <!-- Correct or wrong image -->
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-correct.svg"
+                  alt=""
+                />
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-error.svg"
+                  alt=""
+                />
+              </button>
+
+              <!-- C: ANSWER -->
+              <button
+                id="answer-c"
+                type="button"
+                aria-label="Answer: C"
+                aria-pressed="false"
+                class="drop-shadow-button flex items-center justify-between p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 group hover:outline-2 hover:outline-purple-600 focus:outline-[3px] focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:rounded-3xl xl:p-6"
+              >
+                <!-- Number of answer and answer container -->
+                <div class="flex items-center justify-start gap-4 md:gap-8">
+                  <div
+                    class="flex items-center justify-center bg-grey-50 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl group-hover:bg-purple-600 group-focus:bg-purple-600"
+                  >
+                    <span
+                      class="text-medium-leading-100 text-28px text-grey-500 md:text-28px group-hover:text-white group-focus:text-white"
+                      >C</span
+                    >
+                  </div>
+
+                  <span
+                    class="text-medium-leading-100 text-28px text-blue-900 md:text-28px"
+                    >2.5 : 1</span
+                  >
+                </div>
+                <!-- Correct or wrong image -->
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-correct.svg"
+                  alt=""
+                />
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-error.svg"
+                  alt=""
+                />
+              </button>
+
+              <!-- D: ANSWER -->
+              <button
+                id="answer-d"
+                type="button"
+                aria-label="Answer: D"
+                aria-pressed="false"
+                class="drop-shadow-button flex items-center justify-between p-4 rounded-xl w-full text-left bg-white cursor-pointer transition-400 group hover:outline-2 hover:outline-purple-600 focus:outline-[3px] focus:outline-purple-600 active:translate-y-0.5 active:drop-shadow-none md:rounded-3xl xl:p-6"
+              >
+                <!-- Number of answer and answer container -->
+                <div class="flex items-center justify-start gap-4 md:gap-8">
+                  <div
+                    class="flex items-center justify-center bg-grey-50 w-10 h-10 p-1.5 rounded-md md:w-14 md:h-14 md:p-2 md:rounded-xl group-hover:bg-purple-600 group-focus:bg-purple-600"
+                  >
+                    <span
+                      class="text-medium-leading-100 text-28px text-grey-500 md:text-28px group-hover:text-white group-focus:text-white"
+                      >D</span
+                    >
+                  </div>
+
+                  <span
+                    class="text-medium-leading-100 text-28px text-blue-900 md:text-28px"
+                    >5 : 1</span
+                  >
+                </div>
+                <!-- Correct or wrong image -->
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-correct.svg"
+                  alt=""
+                />
+                <img
+                  class="hidden w-8 h-8 md:w-10 md:h-10"
+                  src="../images/icon-error.svg"
+                  alt=""
+                />
+              </button>
+            </div>
+            <!-- 2.2. Submit button -->
+            <button
+              id="submit-button"
+              type="submit"
+              disabled
+              aria-disabled="true"
+              aria-label="Submit answer"
+              class="drop-shadow-button flex justify-center items-center pt-4 pb-4 rounded-xl w-full cursor-pointer transition-400 bg-purple-600 hover:bg-submit-hover focus:bg-submit-hover active:bg-submit-hover active:translate-y-0.5 active:drop-shadow-none md:pt-8 md:pb-8 md:rounded-3xl"
+            >
+              <span
+                class="text-medium-leading-100 text-lg text-white md:text-28px"
+              >
+                Submit Answer
+              </span>
+            </button>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- SCORE SECTION--------------------------------- -->
+      <section
+        id="score-section"
+        class="pl-6 pr-6 md:pl-16 md:pr-16 xl:pl-0 xl:pr-0 xl:w-289.25 xl:mx-auto"
+      >
+        <!-- 1.TEXTS CONATINER & 2. SCORE AND AGAIN BUTTON -->
+        <div class="flex flex-col gap-10 md:gap-16 xl:flex-row xl:gap-36">
+          <!-- 1.TEXTS CONATINER -->
+          <div class="flex flex-col gap-2 z-20">
+            <span
+              class="text-light-leading-100 text-40px text-blue-900 md:text-64px"
+              >Quiz completed</span
+            >
+            <span
+              class="text-medium-leading-100 text-40px text-blue-900 md:text-64px"
+              >You scored...</span
+            >
+          </div>
+          <!-- 2. SCORE AND AGAIN BUTTON -->
+          <div class="flex flex-col justify-center gap-4 md:gap-8 xl:flex-1">
+            <!-- 2.1 score container -->
+            <div
+              class="z-20 flex flex-col gap-4 pt-8 pb-8 rounded-xl bg-white md:gap-10"
+            >
+              <!-- 2.1.1. Quiz Subject -->
+              <div class="z-20 flex items-center justify-center gap-4 md:gap-6">
+                <img
+                  class="bg-purple-100 rounded-sm p-1.5 w-10 h-10 md:rounded-lg md:p-2 md:w-14 md:h-14"
+                  src="../images/icon-accessibility.svg"
+                  alt=""
+                />
+                <span
+                  class="text-medium-leading-100 text-lg text-blue-900 md:text-28px"
+                  >Accesibility</span
+                >
+              </div>
+              <!-- 2.1.2. Number of right answers -->
+              <div class="z-20 flex flex-col items-center gap-4">
+                <span
+                  class="text-medium-leading-100 text-88px text-blue-900 md:text-144px"
+                  >8</span
+                >
+                <span
+                  class="text-medium-leading-100 text-lg text-grey-500 md:text-2xl"
+                  >out of 10</span
+                >
+              </div>
+            </div>
+            <!-- 2.2 AGAIN Button -->
+            <button
+              id="submit-button"
+              type="submit"
+              disabled
+              aria-disabled="true"
+              aria-label="Submit answer"
+              class="drop-shadow-button flex justify-center items-center pt-4 pb-4 rounded-xl w-full cursor-pointer transition-400 bg-purple-600 hover:bg-submit-hover focus:bg-submit-hover active:bg-submit-hover active:translate-y-0.5 active:drop-shadow-none md:pt-8 md:pb-8 md:rounded-3xl"
+            >
+              <span
+                class="text-medium-leading-100 text-lg text-white md:text-28px"
+              >
+                Play Again
+              </span>
+            </button>
+          </div>
+        </div>
+      </section>
     </main>
-    <footer
-      class="z-20 mt-5 xl:fixed xl:bottom-0 xl:left-1/2 xl:-translate-x-1/2"
-    >
+
+    <!-- FOOTER--------------------------------------------------------- -->
+    <footer class="z-20 mt-5 xl:mt-20">
       <div
         aria-label="Challenge and author credits"
-        class="font-rubic font-normal text-xs text-grey-500 text-center pb-8"
+        class="text-normal-leading-150 text-xs text-grey-500 text-center pb-8"
       >
         Challenge by
         <a

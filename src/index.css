@@ -13,6 +13,7 @@
   --color-green-500: #2fd887;
   --color-green-100: #e0fdef;
   --color-purple-600: #a729f5;
+  --color-submit-hover: #d394fa;
   --color-purple-100: #f6e7ff;
   --color-orange-400: #ff7e35;
   --color-orange-50: #fff5ed;
@@ -26,62 +27,83 @@
 
   --font-rubic: "Rubik", sans-serif;
 
-  --drop-shadow-options: 0 16px 40px rgba(143, 160, 193, 0.14);
+  --drop-shadow-button: 0 16px 40px rgba(143, 160, 193, 0.14);
 }
 
 /* Typography */
+.text-medium-leading-100 {
+  @apply font-rubic font-medium leading-[100%] tracking-normal;
+}
+
+.text-medium-leading-120 {
+  @apply font-rubic font-medium leading-[120%] tracking-normal;
+}
+
+.text-medium-leading-150 {
+  @apply font-rubic font-medium leading-[150%] tracking-normal;
+}
+
+.text-normal-leading-150 {
+  @apply font-rubic font-normal leading-[150%] tracking-normal;
+}
+
+.text-light-leading-100 {
+  @apply font-rubic font-light leading-[100%] tracking-normal;
+}
+
+/* Typography FIGMA -----------------------------------------------------*/
 .text-preset-1 {
   @apply font-rubic font-medium text-144px leading-[100%] tracking-normal;
-}
+} /* text-medium-leading-100 text-144px  */
 
 .text-preset-1-mobile {
   @apply font-rubic font-medium text-88px leading-[100%] tracking-normal;
-}
+} /* text-medium-leading-100 text-88px  */
 
 .text-preset-2-medium {
   @apply font-rubic font-medium text-64px leading-[100%] tracking-normal;
-}
+} /* text-medium-leading-100 text-64px  */
 
 .text-preset-2-light {
   @apply font-rubic font-light text-64px leading-[100%] tracking-normal;
-}
+} /* text-light-leading-100 text-64px  */
 
 .text-preset-2-mobile-medium {
   @apply font-rubic font-medium text-40px leading-[100%] tracking-normal;
-}
+} /* text-medium-leading-100 text-40px  */
 
 .text-preset-2-mobile-light {
   @apply font-rubic font-light text-40px leading-[100%] tracking-normal;
-}
+} /* text-light-leading-100 text-40px  */
 
 .text-preset-3 {
   @apply font-rubic font-medium text-4xl leading-[120%] tracking-normal;
-}
+} /* text-medium-leading-120 text-4xl  */
 
 .text-preset-3-mobile {
   @apply font-rubic font-medium text-xl leading-[120%] tracking-normal;
-}
+} /* text-medium-leading-120 text-xl  */
 
 .text-preset-4 {
   @apply font-rubic font-medium text-28px leading-[100%] tracking-normal;
-}
+} /* text-medium-leading-100 text-28px  */
 
 .text-preset-4-mobile {
   @apply font-rubic font-medium text-lg leading-[100%] tracking-normal;
-}
+} /* text-medium-leading-100 text-lg  */
 
 .text-preset-5-medium {
   @apply font-rubic font-medium text-2xl leading-[150%] tracking-normal;
-}
+} /* text-medium-leading-150 text-2xl  */
 
 .text-preset-5-regular {
   @apply font-rubic font-normal text-2xl leading-[150%] tracking-normal;
-}
+} /* text-normal-leading-150 text-2xl  */
 
 .text-preset-6 {
   @apply font-rubic font-normal italic text-xl leading-[150%] tracking-normal;
-}
+} /* text-normal-leading-150 italic text-xl  */
 
 .text-preset-5-mobile {
   @apply font-rubic font-normal italic text-sm leading-[150%] tracking-normal;
-}
+} /* text-normal-leading-150 italic text-sm  */
